@@ -1,37 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissors</title>
-</head>
-<body>
-  <p>Rock Paper Scissors</p>
-  <button onclick="
-    playGame('rock');
-  ">Rock</button>
 
-  <button onclick="
-    playGame('paper');
-  ">Paper</button>
-
-  <button onclick="
-    playGame('scissors');
-  ">Scissors</button>
-
-  <p class="js-result"></p>
-  <p class="js-moves"></p>
-  <p class="js-score"></p>
-
-  <button onclick="
-    score.wins = 0;
-    score.losses = 0;
-    score.ties = 0;
-    localStorage.removeItem('score');
-    updateScoreElement();
-  ">Reset Score</button>
-
-  <script>
     let score = JSON.parse(localStorage.getItem('score')) || {
       wins: 0,
       losses: 0,
@@ -87,7 +54,10 @@
 
       document.querySelector('.js-result').innerHTML = result;
 
-      document.querySelector('.js-moves').innerHTML = `You ${playerMove} - ${computerMove} Computer`;
+      document.querySelector('.js-moves').innerHTML = `You
+    <img src="image/${playerMove}-emoji.png" alt="rock" class="move-icon">
+    <img src="image/${computerMove}-emoji.png" alt="scissor" class="move-icon">
+    Computer`;
     }
 
     function updateScoreElement() {
@@ -110,6 +80,3 @@
 
       return computerMove;
     }
-  </script>
-</body>
-</html>
