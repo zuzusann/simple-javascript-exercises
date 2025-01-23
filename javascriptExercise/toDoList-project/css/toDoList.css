@@ -19,10 +19,15 @@ body{
     justify-content: center;
 }
 
+header h1{
+    font-family: cursive;
+    margin: 80px;
+}
+
 .form{
     position: absolute;
     top: 30%;
-    box-shadow: 0 4px 8px rgba(0,0,0,.3);
+    box-shadow: 0 8px 8px rgba(0,0,0,.3);
     width: 400px;
     background-color:var(--form-bg-color);
     border-radius: 10px;
@@ -58,7 +63,7 @@ body{
 }
 
 .list li .fa-trash{
-    color: var(--icon-color);
+    
     position: absolute;
     right: 20px;
     top: 50%;
@@ -69,6 +74,7 @@ body{
 .list li.checked {
     color: darkgray;
     text-decoration: line-through;
+    cursor: pointer;
 }
 
 .list li.checked .fa-check-square{
