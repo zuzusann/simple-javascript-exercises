@@ -80,11 +80,12 @@ body {
 }
 
 .welcome h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 .welcome p {
     font-weight: 500;
+    color: #616161;
 }
 
 .welcome .img {
@@ -296,15 +297,15 @@ body {
     color: #2e2e2e;
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.031);
-    opacity: 0;
-    visibility: hidden;
+    /* opacity: 0; */
+    /* visibility: hidden; */
     transition: all 0.3s;
 }
 
-.task-wrapper:hover .delete {
+/* .task-wrapper:hover .delete {
     opacity: 1;
     visibility: visible;
-}
+} */
 
 .task-wrapper .delete:hover {
     color: red;
@@ -449,7 +450,61 @@ button.add-btn {
 }
 
 
+
+
+
 @media (min-width:768px) {
+    .categories{
+        padding: 0 9rem;
+    }
+
+    .head-wrapper {
+        padding: 0 11rem;
+    }
+
+    .welcome {
+        justify-content: space-between;
+    }
+
+    
+
+    .add-task {
+        padding: 20px 300px;
+    }
+
+    .category-screen{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .category-details {
+        padding:30px;
+        margin-top: 7rem;
+        display: flex;
+        align-items: center;
+        margin-left: 300px;
+    }
+
+    .task-wrapper p{
+        
+        font-size: 20px;
+    }
+
+    .tasks {
+        padding-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-left: 200px;
+    }
+
+    .delete{
+        margin-right: 200px;
+    }
+    
+}
+
+@media (max-width:768px) {
     .wrapper {
         height: 50rem;
         width: 25rem;
